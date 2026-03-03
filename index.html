@@ -1,456 +1,382 @@
 <!DOCTYPE html>
-<!-- A tag html define o idioma da página. pt-BR é essencial para o SEO no Brasil -->
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <!-- A tag viewport garante que o site se adapta corretamente a ecrãs de telemóveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deskchain - Gerador de Links para WhatsApp | São Francisco, MG</title>
-    <!-- ========================================== -->
-    <!-- SEO BÁSICO (Otimização para Motores de Busca)-->
-    <!-- ========================================== -->
-    <!-- A description é o texto que aparece no Google por baixo do título -->
-    <meta name="description" content="Crie links personalizados e Códigos QR para o WhatsApp do seu negócio em São Francisco, MG. Ferramenta gratuita da Deskchain para facilitar o seu atendimento.">
-    <!-- Palavras-chave ajudam o Google a entender o contexto da sua página -->
-    <meta name="keywords" content="gerador de link whatsapp, link whatsapp, são francisco mg, minas gerais, deskchain, qr code whatsapp, negócios locais, atendimento">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Preconnect: Melhora a velocidade de carregamento conectando aos servidores antes do pedido -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Título Otimizado (Máximo 60 caracteres) -->
+    <title>Deskchain | Gerador de Link WhatsApp e QR Code Grátis</title>
+
+    <!-- SEO BÁSICO -->
+    <meta name="description" content="Crie links curtos e QR Codes personalizados para WhatsApp. Ferramenta gratuita da Deskchain para negócios em São Francisco, MG e todo o Brasil.">
+    <meta name="keywords" content="gerador de link whatsapp, link whatsapp, são francisco mg, minas gerais, deskchain, qr code whatsapp, marketing digital, vendas whatsapp">
     <meta name="author" content="Deskchain">
-    <!-- Diz aos robôs do Google para indexarem (lerem) e seguirem os links desta página -->
-    <meta name="robots" content="index, follow">
-    <!-- Canonical evita que o Google ache que existem páginas duplicadas do seu site -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://deskchaingeradordelink.netlify.app/">
-    <!-- ========================================== -->
-    <!-- OPEN GRAPH (Para partilhas no Facebook, LinkedIn, WhatsApp) -->
-    <!-- ========================================== -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://deskchaingeradordelink.netlify.app/">
-    <meta property="og:title" content="Deskchain - Gerador de Links para WhatsApp | São Francisco, MG">
-    <meta property="og:description" content="Simplifique o atendimento do seu negócio em São Francisco, MG. Crie links de WhatsApp personalizados gratuitamente com a Deskchain.">
-    <!-- Imagem que aparece quando o link é partilhado -->
-    <meta property="og:image" content="https://deskchaingeradordelink.netlify.app/./favicon.png?v=2">
+    <meta name="theme-color" content="#f97316">
+
+    <!-- OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
     <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Deskchain - Gerador de Link WhatsApp e QR Code">
+    <meta property="og:description" content="Transforme seu atendimento em São Francisco, MG. Crie links e QR Codes gratuitos para WhatsApp em segundos.">
+    <meta property="og:url" content="https://deskchaingeradordelink.netlify.app/">
     <meta property="og:site_name" content="Deskchain">
-    <!-- ========================================== -->
-    <!-- TWITTER CARDS (Para partilhas no X / Twitter) -->
-    <!-- ========================================== -->
+    <meta property="og:image" content="https://deskchaingeradordelink.netlify.app/favicon.png?v=2">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:type" content="image/png">
+
+    <!-- TWITTER CARDS -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://deskchaingeradordelink.netlify.app/">
-    <meta name="twitter:title" content="Deskchain - Gerador de Links para WhatsApp | São Francisco, MG">
-    <meta name="twitter:description" content="Simplifique o atendimento do seu negócio em São Francisco, MG. Crie links de WhatsApp personalizados gratuitamente com a Deskchain.">
-    <meta name="twitter:image" content="https://deskchaingeradordelink.netlify.app/./favicon.png?v=2">
-    <!-- ========================================== -->
-    <!-- FAVICON (Ícone da aba do navegador)        -->
-    <!-- ========================================== -->
+    <meta name="twitter:title" content="Deskchain | Gerador de Link WhatsApp">
+    <meta name="twitter:description" content="Crie links e QR Codes personalizados para o seu negócio. Grátis e rápido.">
+    <meta name="twitter:image" content="https://deskchaingeradordelink.netlify.app/favicon.png?v=2">
+
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="./favicon.png?v=2">
     <link rel="apple-touch-icon" href="./favicon.png?v=2">
-    <!-- ========================================== -->
-    <!-- BIBLIOTECAS EXTERNAS                       -->
-    <!-- ========================================== -->
-    <!-- Carrega o Tailwind CSS: Framework que permite estilizar o site usando classes no HTML -->
+
+    <!-- DADOS ESTRUTURADOS (JSON-LD) - Essencial para Rich Snippets no Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Deskchain WhatsApp Link Generator",
+      "operatingSystem": "All",
+      "applicationCategory": "BusinessApplication",
+      "description": "Ferramenta gratuita para gerar links e QR Codes personalizados para WhatsApp.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BRL"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Deskchain",
+        "url": "https://deskchain.com.br"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Deskchain",
+      "url": "https://deskchaingeradordelink.netlify.app/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://deskchaingeradordelink.netlify.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- ESTILOS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Carrega os Phosphor Icons: Biblioteca de ícones moderna e leve -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <!-- Estilos CSS personalizados (apenas o que o Tailwind não cobre diretamente) -->
     <style>
-        /* Personaliza a barra de rolagem (scroll) da área de histórico para ficar mais elegante */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px; /* Largura da barra */
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f5f9; /* Cor do fundo da barra */
-            border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #cbd5e1; /* Cor da parte que se move */
-            border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; /* Cor quando se passa o rato por cima */
-        }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        /* Suavização de scroll para melhor UX */
+        html { scroll-behavior: smooth; }
     </style>
 </head>
-<!-- A classe bg-gray-50 dá um fundo cinza muito claro à página inteira -->
 <body class="bg-gray-50 font-sans text-gray-800 min-h-screen py-6 sm:py-12 px-4 sm:px-6 lg:px-8">
 
-    <!-- Contentor principal que limita a largura máxima do site e centra-o no ecrã -->
     <div class="max-w-4xl mx-auto w-full space-y-6 sm:space-y-8">
-        <!-- ========================================== -->
-        <!-- CABEÇALHO (Logotipo, Título e Descrição)   -->
-        <!-- ========================================== -->
-        <div class="text-center">
+        
+        <!-- CABEÇALHO SEMÂNTICO -->
+        <header class="text-center" role="banner">
             <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-3">
                 Deskchain
             </h1>
             <p class="mt-3 text-lg text-gray-500 max-w-2xl mx-auto">
-                O Gerador de Links para WhatsApp de <strong>São Francisco, MG</strong>. Crie links personalizados e códigos QR gratuitos para os seus clientes iniciarem uma conversa com um clique.
+                O melhor <strong>Gerador de Links para WhatsApp</strong> de São Francisco, MG. Aumente suas vendas convertendo visitantes em contatos diretos com links e QR Codes.
             </p>
-        </div>
-        <!-- ========================================== -->
-        <!-- ÁREA PRINCIPAL (Formulário e Resultado)    -->
-        <!-- ========================================== -->
-        <!-- Contentor branco com sombra e cantos arredondados -->
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-            <!-- Grelha que divide o ecrã em 2 colunas em ecrãs grandes (md:grid-cols-2), e 1 coluna em telemóveis -->
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                <!-- -------------------------------------- -->
-                <!-- COLUNA ESQUERDA: Formulário de Entrada -->
-                <!-- -------------------------------------- -->
-                <div class="p-5 sm:p-8 bg-white border-b md:border-b-0 md:border-r border-gray-100">
-                    <h2 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                        <span class="bg-orange-100 text-orange-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
-                        Configure a sua mensagem
-                    </h2>
+        </header>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="space-y-8">
+            <article class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="grid grid-cols-1 md:grid-cols-2">
                     
-                    <div class="space-y-5">
-                        <!-- Campo: Título do Link -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1 flex items-center">
-                                <i class="ph ph-tag text-gray-400 mr-1.5 text-lg"></i>
-                                Título do Link (Opcional)
-                            </label>
-                            <input type="text" id="input-title" placeholder="Ex: Campanha Instagram..." 
-                                class="block w-full border border-gray-300 rounded-lg p-3 shadow-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none text-base sm:text-sm text-gray-900">
-                            <p class="mt-1 text-xs text-gray-500">Ajuda a identificar o link no seu histórico.</p>
-                        </div>
-
-                        <!-- Campo: Telefone -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1 flex items-center">
-                                <i class="ph ph-phone text-gray-400 mr-1.5 text-lg"></i>
-                                Número de telemóvel *
-                            </label>
-                            <!-- Agrupa o código do país (+351 / +55) e o número de telefone visualmente -->
-                            <div class="flex shadow-sm rounded-lg overflow-hidden border border-gray-300 focus-within:ring-2 focus-within:ring-orange-500 focus-within:border-orange-500">
-                                <div class="flex-none bg-gray-50 flex items-center px-3 border-r border-gray-300 text-gray-500">
-                                    + <input type="text" id="input-code" value="351" maxlength="4" class="w-10 bg-transparent border-none p-0 text-center outline-none ml-1 text-base sm:text-sm">
-                                </div>
-                                <input type="text" id="input-phone" placeholder="912 345 678" 
-                                    class="flex-1 block w-full border-none p-3 outline-none text-base sm:text-sm text-gray-900 placeholder-gray-400">
+                    <!-- COLUNA ESQUERDA: CONFIGURAÇÃO -->
+                    <section class="p-5 sm:p-8 bg-white border-b md:border-b-0 md:border-r border-gray-100" aria-labelledby="config-title">
+                        <h2 id="config-title" class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                            <span class="bg-orange-100 text-orange-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                            Configure sua Mensagem
+                        </h2>
+                        
+                        <div class="space-y-5">
+                            <div>
+                                <label for="input-title" class="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                                    <i class="ph ph-tag text-gray-400 mr-1.5 text-lg" aria-hidden="true"></i>
+                                    Título do Link (Identificação)
+                                </label>
+                                <input type="text" id="input-title" placeholder="Ex: Botão do Site..." 
+                                    class="block w-full border border-gray-300 rounded-lg p-3 shadow-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none text-base sm:text-sm text-gray-900">
                             </div>
-                            <p class="mt-1 text-xs text-gray-500">Introduza o código do país e o número, sem espaços.</p>
+
+                            <div>
+                                <label for="input-phone" class="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                                    <i class="ph ph-phone text-gray-400 mr-1.5 text-lg" aria-hidden="true"></i>
+                                    Número com DDD *
+                                </label>
+                                <div class="flex shadow-sm rounded-lg overflow-hidden border border-gray-300 focus-within:ring-2 focus-within:ring-orange-500">
+                                    <div class="flex-none bg-gray-50 flex items-center px-3 border-r border-gray-300 text-gray-500">
+                                        + <input type="text" id="input-code" value="55" aria-label="Código do País" maxlength="4" class="w-10 bg-transparent border-none p-0 text-center outline-none ml-1 text-base sm:text-sm">
+                                    </div>
+                                    <input type="tel" id="input-phone" placeholder="38999999999" aria-required="true"
+                                        class="flex-1 block w-full border-none p-3 outline-none text-base sm:text-sm text-gray-900 placeholder-gray-400">
+                                </div>
+                                <p class="mt-1 text-xs text-gray-500">Ex: 38 9 9999-8888 (apenas números)</p>
+                            </div>
+
+                            <div>
+                                <label for="input-message" class="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                                    <i class="ph ph-chat-centered-text text-gray-400 mr-1.5 text-lg" aria-hidden="true"></i>
+                                    Mensagem Pré-definida
+                                </label>
+                                <textarea id="input-message" rows="4" placeholder="Olá! Vi seu anúncio e gostaria de saber mais." 
+                                    class="block w-full border border-gray-300 rounded-lg p-3 shadow-sm focus:ring-2 focus:ring-orange-500 outline-none resize-none text-base sm:text-sm text-gray-900 placeholder-gray-400"></textarea>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- COLUNA DIREITA: RESULTADOS -->
+                    <section class="p-5 sm:p-8 bg-gray-50 flex flex-col" aria-labelledby="result-title">
+                        <h2 id="result-title" class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                            <span class="bg-orange-100 text-orange-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+                            Resultado Gerado
+                        </h2>
+
+                        <div id="empty-state" class="flex-1 flex flex-col items-center justify-center text-center p-6 border-2 border-dashed border-gray-300 rounded-xl bg-gray-50 opacity-75">
+                            <i class="ph ph-link text-gray-300 text-5xl mb-3" aria-hidden="true"></i>
+                            <p class="text-gray-500 text-sm">Aguardando o preenchimento do número de telefone...</p>
                         </div>
 
-                        <!-- Campo: Mensagem -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1 flex items-center">
-                                <i class="ph ph-chat-centered-text text-gray-400 mr-1.5 text-lg"></i>
-                                Mensagem personalizada (Opcional)
-                            </label>
-                            <!-- textarea permite escrever múltiplas linhas de texto -->
-                            <textarea id="input-message" rows="4" placeholder="Olá! Gostaria de obter mais informações sobre os vossos serviços." 
-                                class="block w-full border border-gray-300 rounded-lg p-3 shadow-sm focus:ring-2 focus:ring-orange-500 outline-none resize-none text-base sm:text-sm text-gray-900 placeholder-gray-400"></textarea>
-                            <p class="mt-1 text-xs text-gray-500">Esta mensagem aparecerá automaticamente na caixa de texto do utilizador.</p>
+                        <div id="result-state" class="flex-1 flex flex-col justify-between hidden">
+                            <div class="space-y-6">
+                                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm break-all">
+                                    <p id="output-link" class="text-sm font-medium text-orange-600 truncate mb-2 text-center"></p>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <button onclick="copyMainLink(this)" class="flex-1 flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 transition-all focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+                                        <i class="ph ph-copy mr-2 text-lg" aria-hidden="true"></i> <span class="btn-text">Copiar Link</span>
+                                    </button>
+                                    <a id="test-link" href="#" target="_blank" rel="noopener noreferrer" onclick="saveToHistory()" class="flex-1 flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-green-600 transition-all">
+                                        <i class="ph ph-whatsapp-logo mr-2 text-lg" aria-hidden="true"></i> Testar Link
+                                    </a>
+                                </div>
+
+                                <div class="pt-6 border-t border-gray-200 flex flex-col items-center">
+                                    <p class="text-sm text-gray-600 mb-4 flex items-center font-medium">
+                                        <i class="ph ph-qr-code mr-1.5 text-lg" aria-hidden="true"></i> QR Code Personalizado
+                                    </p>
+                                    <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100">
+                                        <img id="qr-image" src="" alt="QR Code gerado para acesso ao WhatsApp" class="w-40 h-40">
+                                    </div>
+                                    <p class="mt-3 text-xs text-gray-500 text-center max-w-xs">
+                                        Clique com o botão direito para salvar a imagem do seu QR Code.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
-                <!-- -------------------------------------- -->
-                <!-- COLUNA DIREITA: Resultado e Ações      -->
-                <!-- -------------------------------------- -->
-                <div class="p-5 sm:p-8 bg-gray-50 flex flex-col">
-                    <h2 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                        <span class="bg-orange-100 text-orange-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
-                        O seu Link e Código QR
+            </article>
+
+            <!-- HISTÓRICO -->
+            <section id="history-section" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 p-5 sm:p-8 hidden">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 border-b border-gray-100 pb-4 gap-3">
+                    <h2 class="text-xl font-bold text-gray-800 flex items-center">
+                        <i class="ph-fill ph-clock-counter-clockwise mr-2 text-orange-500 text-2xl" aria-hidden="true"></i>
+                        Seus Links Recentes
                     </h2>
-                    <!-- ESTADO VAZIO: Mostrado quando o utilizador ainda não preencheu o número -->
-                    <div id="empty-state" class="flex-1 flex flex-col items-center justify-center text-center p-6 border-2 border-dashed border-gray-300 rounded-xl bg-gray-50 opacity-75">
-                        <i class="ph ph-link text-gray-300 text-5xl mb-3"></i>
-                        <p class="text-gray-500 text-sm">Preencha o seu número de telemóvel ao lado para visualizar o seu link e código QR aqui.</p>
-                    </div>
-                    <!-- ESTADO PREENCHIDO: Oculto (hidden) inicialmente. Aparece quando há um link gerado -->
-                    <div id="result-state" class="flex-1 flex flex-col justify-between hidden">
-                        <div class="space-y-6">
-                            <!-- Exibição visual do link gerado -->
-                            <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm break-all">
-                                <p id="output-link" class="text-sm font-medium text-orange-600 truncate mb-2 text-center"></p>
-                            </div>
-                            <!-- Botões de Ação -->
-                            <div class="flex flex-col sm:flex-row gap-3">
-                                <!-- Botão de Copiar (Usa onclick="copyMainLink(this)" para chamar o JavaScript) -->
-                                <button onclick="copyMainLink(this)" class="flex-1 flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 transition-colors">
-                                    <i class="ph ph-copy mr-2 text-lg"></i> <span class="btn-text">Copiar Link</span>
-                                </button>
-                                <!-- Botão Testar no WhatsApp (Abre um novo separador) -->
-                                <a id="test-link" href="#" target="_blank" onclick="saveToHistory()" class="flex-1 flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-green-500 hover:bg-green-600 transition-colors">
-                                    <i class="ph ph-whatsapp-logo mr-2 text-lg"></i> Testar no WhatsApp
-                                </a>
-                            </div>
-                            <!-- Secção do Código QR -->
-                            <div class="pt-6 border-t border-gray-200 flex flex-col items-center">
-                                <p class="text-sm text-gray-600 mb-4 flex items-center font-medium">
-                                    <i class="ph ph-qr-code mr-1.5 text-lg"></i> Código QR para impressão
-                                </p>
-                                <div class="bg-white p-3 rounded-xl shadow-sm border border-gray-100">
-                                    <!-- A imagem do QR é gerada por uma API externa baseada no link -->
-                                    <img id="qr-image" src="" alt="Código QR do WhatsApp" class="w-40 h-40">
-                                </div>
-                                <p class="mt-3 text-xs text-gray-500 text-center max-w-xs">
-                                    Guarde esta imagem e adicione-a aos seus cartões de visita, folhetos ou redes sociais.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <span id="history-count" class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full self-start sm:self-auto"></span>
                 </div>
-            </div>
-        </div>
-        <!-- ========================================== -->
-        <!-- SECÇÃO: Histórico de Links Guardados       -->
-        <!-- ========================================== -->
-        <!-- Só aparece quando existem links guardados no navegador (controlado pelo JavaScript) -->
-        <div id="history-section" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 p-5 sm:p-8 hidden">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 border-b border-gray-100 pb-4 gap-3">
-                <h2 class="text-xl font-bold text-gray-800 flex items-center">
-                    <i class="ph-fill ph-clock-counter-clockwise mr-2 text-orange-500 text-2xl"></i>
-                    O Seu Histórico de Links
-                </h2>
-                <!-- Mostra a contagem de links guardados -->
-                <span id="history-count" class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full self-start sm:self-auto"></span>
-            </div>
-            
-            <!-- Lista onde os itens do histórico serão injetados pelo JavaScript -->
-            <div id="history-list" class="space-y-4 max-h-[300px] sm:max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
-                <!-- Itens injetados via JavaScript -->
-            </div>
-        </div>
-        <!-- ========================================== -->
-        <!-- SECÇÃO: Instruções Rápidas                 -->
-        <!-- ========================================== -->
-        <div class="bg-blue-50 border border-blue-100 rounded-xl p-6">
-            <h3 class="text-blue-800 font-semibold mb-2">Como usar este link?</h3>
-            <ul class="text-blue-700 text-sm space-y-2 list-disc pl-5">
-                <li>Coloque o link na biografia do seu Instagram ou TikTok.</li>
-                <li>Use o link em botões do seu website (ex: "Fale connosco").</li>
-                <li>Imprima o Código QR e coloque-o na sua loja física em São Francisco, MG.</li>
-                <li>Quando alguém clicar no link, o WhatsApp abrirá automaticamente uma conversa.</li>
-            </ul>
-        </div>
-        <!-- ========================================== -->
-        <!-- RODAPÉ (Footer)                            -->
-        <!-- ========================================== -->
-        <footer class="mt-8 border-t border-gray-200 pt-8 pb-4 text-center">
+                <div id="history-list" class="space-y-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar"></div>
+            </section>
+
+            <!-- INSTRUÇÕES E SEO CONTENT (Melhora ranking) -->
+            <section class="bg-blue-50 border border-blue-100 rounded-xl p-6">
+                <h3 class="text-blue-800 font-semibold mb-2">Por que usar o Gerador de Link da Deskchain?</h3>
+                <ul class="text-blue-700 text-sm space-y-2 list-disc pl-5">
+                    <li><strong>Link Bio Instagram:</strong> Facilite o contato direto removendo a necessidade do cliente salvar seu número.</li>
+                    <li><strong>QR Code em Lojas Físicas:</strong> Imprima e cole no balcão da sua loja em <strong>São Francisco - MG</strong>.</li>
+                    <li><strong>Campanhas de Anúncios:</strong> Use links com mensagens específicas para saber de qual anúncio o cliente veio.</li>
+                    <li><strong>Segurança:</strong> Não armazenamos seus números em servidores externos; tudo funciona no seu navegador.</li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- RODAPÉ -->
+        <footer class="mt-8 border-t border-gray-200 pt-8 pb-4 text-center" role="contentinfo">
             <p class="text-sm text-gray-500 mb-2">
-                Impulsionando os negócios de <strong>São Francisco, MG</strong> e de todo o Brasil.
+                Desenvolvido para impulsionar o comércio de <strong>São Francisco, MG</strong>.
             </p>
-            <p class="text-sm text-gray-600 font-medium">
-                Conheça os nossos serviços em: 
+            <nav class="text-sm text-gray-600 font-medium">
+                Conheça nossa agência: 
                 <a href="https://deskchain.com.br/" target="_blank" rel="noopener noreferrer" class="text-orange-500 hover:text-orange-600 hover:underline transition-colors">
                     deskchain.com.br
                 </a>
-            </p>
+            </nav>
         </footer>
 
     </div>
-    <!-- ========================================== -->
-    <!-- JAVASCRIPT: A "Mente" da Aplicação         -->
-    <!-- ========================================== -->
+
+    <!-- SCRIPTS -->
     <script>
-        // 1. CAPTURA DOS ELEMENTOS DA PÁGINA (DOM)
-        // Guardamos as referências aos campos de texto para ler o que o utilizador escreve
         const inputTitle = document.getElementById('input-title');
         const inputCode = document.getElementById('input-code');
         const inputPhone = document.getElementById('input-phone');
         const inputMessage = document.getElementById('input-message');
         
-        // Guardamos as referências às áreas que vamos esconder/mostrar ou alterar texto
         const emptyState = document.getElementById('empty-state');
         const resultState = document.getElementById('result-state');
         const outputLink = document.getElementById('output-link');
         const testLink = document.getElementById('test-link');
         const qrImage = document.getElementById('qr-image');
         
-        // Elementos referentes ao histórico
         const historySection = document.getElementById('history-section');
         const historyList = document.getElementById('history-list');
         const historyCount = document.getElementById('history-count');
 
-        // Variável global para guardar o link atual que está a ser gerado
         let currentGeneratedLink = "";
 
-        // 2. DETEÇÃO DE ALTERAÇÕES EM TEMPO REAL
-        // Adiciona um "ouvinte" que executa a função generateLink sempre que se escreve nos campos
         [inputCode, inputPhone, inputMessage].forEach(input => {
             input.addEventListener('input', generateLink);
         });
 
-        // 3. FUNÇÃO PRINCIPAL: GERAR O LINK DO WHATSAPP
         function generateLink() {
-            // Remove qualquer coisa que não seja um número (letras, espaços, traços) usando regex (/\D/g)
             const cleanNumber = inputPhone.value.replace(/\D/g, '');
             const cleanCode = inputCode.value.replace(/\D/g, '');
 
-            // Se existir um número válido escrito
-            if (cleanNumber) {
-                // Junta o código do país com o número
+            if (cleanNumber.length >= 8) {
                 const fullNumber = `${cleanCode}${cleanNumber}`;
-                // Cria a base do link oficial da API do WhatsApp
                 let url = `https://wa.me/${fullNumber}`;
                 
-                // Se o utilizador escreveu uma mensagem, adiciona-a ao link
                 if (inputMessage.value.trim()) {
-                    // encodeURIComponent converte espaços e caracteres especiais para formato web (ex: espaço vira %20)
                     url += `?text=${encodeURIComponent(inputMessage.value.trim())}`;
                 }
                 
-                // Atualiza a variável global
                 currentGeneratedLink = url;
-                
-                // Esconde a área vazia e mostra a área de resultados
                 emptyState.classList.add('hidden');
                 resultState.classList.remove('hidden');
                 
-                // Preenche os dados visuais na página
                 outputLink.textContent = url;
-                testLink.href = url; // Define para onde o botão "Testar" vai apontar
-                // Gera a imagem do QR Code usando uma API pública e gratuita
-                qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(url)}&color=111827`;
+                testLink.href = url;
+                qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(url)}&color=111827`;
+                qrImage.alt = `QR Code para o número ${fullNumber}`;
             } else {
-                // Se não houver número, limpa tudo e volta a mostrar o estado "Vazio"
                 currentGeneratedLink = "";
                 emptyState.classList.remove('hidden');
                 resultState.classList.add('hidden');
             }
         }
 
-        // 4. FUNÇÃO PARA COPIAR O LINK PARA A ÁREA DE TRANSFERÊNCIA
-        // Recebe o texto a copiar e o botão que foi clicado (para mudar a cor)
-        function executeCopy(text, buttonElement) {
-            // Cria um campo de texto invisível na página
-            const textArea = document.createElement("textarea");
-            textArea.value = text;
-            textArea.style.position = "fixed"; // Para não alterar o layout da página
-            document.body.appendChild(textArea);
-            textArea.select(); // Seleciona o texto dentro do campo oculto
-            
+        async function executeCopy(text, buttonElement) {
             try {
-                // Executa o comando nativo do navegador para copiar (Ctrl+C)
-                document.execCommand('copy');
+                await navigator.clipboard.writeText(text);
                 
-                // Feedback visual: Guarda o formato original do botão
                 const originalHtml = buttonElement.innerHTML;
-                // Altera o texto para "Copiado!" e o ícone
                 buttonElement.innerHTML = '<i class="ph-fill ph-check-circle mr-2 text-lg"></i> Copiado!';
+                buttonElement.classList.add('bg-orange-600', 'text-white');
                 
-                // Troca as cores dependendo se é o botão principal laranja ou um botão do histórico branco
-                buttonElement.classList.remove('bg-orange-500', 'hover:bg-orange-600', 'bg-white', 'text-gray-700', 'border-gray-300');
-                buttonElement.classList.add('bg-orange-600', 'text-white', 'border-transparent');
-                
-                // Espera 2 segundos (2000 milissegundos) e devolve o botão ao normal
                 setTimeout(() => {
                     buttonElement.innerHTML = originalHtml;
-                    if(originalHtml.includes('Copiar Link')) { // Se for o botão principal
-                        buttonElement.classList.remove('bg-orange-600');
-                        buttonElement.classList.add('bg-orange-500', 'hover:bg-orange-600');
-                    } else { // Se for um botão de item de histórico
-                        buttonElement.classList.remove('bg-orange-600', 'text-white', 'border-transparent');
-                        buttonElement.classList.add('bg-white', 'text-gray-700', 'border-gray-300');
-                    }
+                    buttonElement.classList.remove('bg-orange-600', 'text-white');
                 }, 2000);
             } catch (err) {
-                console.error('Falha ao copiar', err);
+                // Fallback para navegadores antigos
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
             }
-            // Remove o campo de texto invisível (limpeza)
-            document.body.removeChild(textArea);
         }
 
-        // Função chamada pelo botão principal de "Copiar Link"
         function copyMainLink(btn) {
             if(!currentGeneratedLink) return;
-            executeCopy(currentGeneratedLink, btn); // Copia o link
-            saveToHistory(); // E aproveita para guardar no histórico
+            executeCopy(currentGeneratedLink, btn);
+            saveToHistory();
         }
 
-        // 5. SISTEMA DE HISTÓRICO LOCAL (Usa o LocalStorage do Navegador)
-        
-        // Lê os links guardados na memória do navegador do utilizador
         function getHistory() {
-            // Se não existir nada, devolve um array vazio '[]'
-            return JSON.parse(localStorage.getItem('whatsapp_link_history') || '[]');
+            return JSON.parse(localStorage.getItem('whatsapp_link_history_v2') || '[]');
         }
 
-        // Guarda o link atual na memória
         function saveToHistory() {
             if(!currentGeneratedLink) return;
-            
             let history = getHistory();
-            
-            // Verifica se o último link guardado é exatamente igual ao atual (evita gravar duplicados seguidos)
-            if(history.length > 0 && history[0].link === currentGeneratedLink) {
-                return;
-            }
+            if(history.length > 0 && history[0].link === currentGeneratedLink) return;
 
-            // Captura a data e hora do momento da gravação
             const now = new Date();
-            const dateStr = now.toLocaleDateString('pt-PT') + ' ' + now.toLocaleTimeString('pt-PT', {hour: '2-digit', minute:'2-digit'});
+            const dateStr = now.toLocaleDateString('pt-BR') + ' ' + now.toLocaleTimeString('pt-BR', {hour: '2-digit', minute:'2-digit'});
 
-            // Cria um objeto (caixinha de dados) com a informação deste link
             const newItem = {
-                id: Date.now().toString(), // ID único baseado no tempo exato
-                title: inputTitle.value.trim(),
+                id: Date.now().toString(),
+                title: inputTitle.value.trim() || 'Link sem título',
                 phone: `+${inputCode.value} ${inputPhone.value}`,
                 message: inputMessage.value.trim(),
                 link: currentGeneratedLink,
                 date: dateStr
             };
 
-            // Adiciona o novo link no topo da lista (unshift)
             history.unshift(newItem);
-            // Se o histórico passar de 20 itens, corta e apaga os mais antigos
-            if(history.length > 20) history = history.slice(0, 20); 
-            
-            // Grava a lista atualizada de volta na memória do navegador
-            localStorage.setItem('whatsapp_link_history', JSON.stringify(history));
-            renderHistory(); // Atualiza a página visualmente
+            if(history.length > 15) history = history.slice(0, 15); 
+            localStorage.setItem('whatsapp_link_history_v2', JSON.stringify(history));
+            renderHistory();
         }
 
-        // Apaga um item específico do histórico usando o seu ID
         function deleteFromHistory(id) {
-            let history = getHistory();
-            // Filtra a lista, mantendo todos os itens EXCETO aquele que queremos apagar
-            history = history.filter(item => item.id !== id);
-            localStorage.setItem('whatsapp_link_history', JSON.stringify(history));
-            renderHistory(); // Atualiza a página visualmente
+            let history = getHistory().filter(item => item.id !== id);
+            localStorage.setItem('whatsapp_link_history_v2', JSON.stringify(history));
+            renderHistory();
         }
 
-        // Desenha a lista de histórico no HTML
         function renderHistory() {
             const history = getHistory();
-            
-            // Se o histórico estiver vazio, esconde a secção de histórico
             if(history.length === 0) {
                 historySection.classList.add('hidden');
                 return;
             }
 
-            // Mostra a secção e atualiza a contagem
             historySection.classList.remove('hidden');
-            historyCount.textContent = `Últimos ${history.length} guardados`;
+            historyCount.textContent = `${history.length} links salvos`;
             
-            // Mapeia (transforma) cada item do histórico num bloco de HTML (divs) e injeta na página
             historyList.innerHTML = history.map(item => `
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-gray-200 bg-gray-50 rounded-xl gap-4 hover:border-orange-300 hover:bg-white transition-all">
-                    <div class="overflow-hidden w-full space-y-1">
-                        ${item.title ? `<h3 class="font-bold text-gray-900 text-lg mb-0.5">${item.title}</h3>` : ''}
-                        <div class="flex items-center gap-2">
-                            <i class="ph ph-phone text-gray-400"></i>
-                            <p class="font-semibold ${item.title ? 'text-gray-600 text-sm' : 'text-gray-800'}">${item.phone}</p>
-                        </div>
-                        ${item.message ? `<p class="text-sm text-gray-600 truncate max-w-md">"${item.message}"</p>` : ''}
-                        <p class="text-xs text-gray-400">${item.date}</p>
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 border border-gray-200 bg-gray-50 rounded-xl gap-4 hover:border-orange-300 transition-all">
+                    <div class="overflow-hidden w-full">
+                        <h3 class="font-bold text-gray-900 text-base truncate">${item.title}</h3>
+                        <p class="text-sm text-gray-600 font-medium">${item.phone}</p>
+                        ${item.message ? `<p class="text-xs text-gray-500 truncate mt-1">"${item.message}"</p>` : ''}
+                        <time class="text-[10px] text-gray-400 block mt-1 uppercase font-bold">${item.date}</time>
                     </div>
-                    
-                    <div class="flex gap-2 w-full sm:w-auto self-end sm:self-auto border-t sm:border-t-0 border-gray-200 pt-4 sm:pt-0 mt-2 sm:mt-0">
-                        <button onclick="executeCopy('${item.link}', this)" class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-3 sm:py-2 rounded-lg text-sm font-medium transition-colors bg-white border border-gray-300 text-gray-700 hover:bg-gray-100">
-                            <i class="ph ph-copy text-lg"></i> Copiar
+                    <div class="flex gap-2 w-full sm:w-auto">
+                        <button onclick="executeCopy('${item.link}', this)" class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sm font-medium bg-white border border-gray-300 text-gray-700 hover:bg-gray-100 transition-colors">
+                            <i class="ph ph-copy"></i> Copiar
                         </button>
-                        <button onclick="deleteFromHistory('${item.id}')" class="p-3 sm:p-2 bg-white border border-gray-300 text-gray-400 hover:text-red-600 hover:border-red-200 hover:bg-red-50 rounded-lg transition-colors">
-                            <i class="ph ph-trash text-lg"></i>
+                        <button onclick="deleteFromHistory('${item.id}')" aria-label="Excluir" class="p-2 bg-white border border-gray-300 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors">
+                            <i class="ph ph-trash"></i>
                         </button>
                     </div>
                 </div>
-            `).join(''); // '.join()' converte a lista de blocos num texto gigante de HTML
+            `).join('');
         }
 
-        // 6. INICIALIZAÇÃO
-        // Quando a página carrega pela primeira vez, executa esta função para mostrar o histórico (caso já existam itens guardados de visitas anteriores)
-        renderHistory();
+        window.onload = renderHistory;
     </script>
 </body>
 </html>
