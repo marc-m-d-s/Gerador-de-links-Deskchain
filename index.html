@@ -42,77 +42,88 @@
     <link rel="icon" type="image/png" href="./favicon.png?v=2">
     <link rel="apple-touch-icon" href="./favicon.png?v=2">
 
-    <!-- DADOS ESTRUTURADOS (JSON-LD) - Essencial para Rich Snippets no Google -->
+    <!-- ========================================== -->
+    <!-- DADOS ESTRUTURADOS (JSON-LD) PARA O GOOGLE -->
+    <!-- ========================================== -->
     <script type="application/ld+json">
     {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://deskchaingeradordelink.netlify.app/#organizacao",
-    "name": "Deskchain",
-    "url": "https://deskchaingeradordelink.netlify.app/",
-    "logo": "https://deskchaingeradordelink.netlify.app/favicon.png",
-    "sameAs": [
-        "https://deskchain.com.br/"
+    "@graph":[
+
+    {
+    "@type":"Organization",
+    "@id":"https://deskchaingeradordelink.netlify.app/#organizacao",
+    "name":"Deskchain",
+    "url":"https://deskchaingeradordelink.netlify.app/",
+    "logo":"https://deskchaingeradordelink.netlify.app/favicon.png",
+    "sameAs":[
+    "https://deskchain.com.br/"
     ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://deskchaingeradordelink.netlify.app/#website",
-    "url": "https://deskchaingeradordelink.netlify.app/",
-    "name": "Deskchain",
-    "inLanguage": "pt-BR",
-    "publisher": {
-        "@id": "https://deskchaingeradordelink.netlify.app/#organizacao"
-    }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "@id": "https://deskchaingeradordelink.netlify.app/#webapp",
-    "name": "Gerador de Link para WhatsApp Deskchain",
-    "url": "https://deskchaingeradordelink.netlify.app/",
-    "description": "Ferramenta gratuita para gerar links personalizados e QR Codes para WhatsApp de forma rápida e simples.",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "All",
-    "inLanguage": "pt-BR",
-    "isAccessibleForFree": true,
-    "creator": {
-        "@id": "https://deskchaingeradordelink.netlify.app/#organizacao"
     },
-    "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "BRL"
-    }
-    }
-    </script>
 
-    <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "@id": "https://deskchaingeradordelink.netlify.app/#software",
-    "name": "Deskchain Gerador de Link WhatsApp",
-    "operatingSystem": "All",
-    "applicationCategory": "BusinessApplication",
-    "url": "https://deskchaingeradordelink.netlify.app/",
-    "description": "Ferramenta gratuita da Deskchain para gerar links e QR Codes personalizados para WhatsApp.",
-    "inLanguage": "pt-BR",
-    "author": {
-        "@id": "https://deskchaingeradordelink.netlify.app/#organizacao"
+    "@type":"WebSite",
+    "@id":"https://deskchaingeradordelink.netlify.app/#website",
+    "url":"https://deskchaingeradordelink.netlify.app/",
+    "name":"Deskchain Gerador de Link WhatsApp",
+    "description":"Gerador gratuito de link para WhatsApp com mensagem personalizada e QR Code.",
+    "inLanguage":"pt-BR",
+    "publisher":{
+    "@id":"https://deskchaingeradordelink.netlify.app/#organizacao"
     },
-    "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "BRL"
+    "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://deskchaingeradordelink.netlify.app/?q={search_term_string}",
+    "query-input":"required name=search_term_string"
     }
+    },
+
+    {
+    "@type":"WebApplication",
+    "@id":"https://deskchaingeradordelink.netlify.app/#webapp",
+    "name":"Gerador de Link para WhatsApp Deskchain",
+    "url":"https://deskchaingeradordelink.netlify.app/",
+    "description":"Ferramenta online gratuita para criar link do WhatsApp com mensagem automática e gerar QR Code para compartilhar facilmente.",
+    "applicationCategory":"BusinessApplication",
+    "applicationSubCategory":"MarketingTool",
+    "operatingSystem":"All",
+    "browserRequirements":"Requires JavaScript",
+    "inLanguage":"pt-BR",
+    "isAccessibleForFree":true,
+    "areaServed":{
+    "@type":"Country",
+    "name":"Brasil"
+    },
+    "creator":{
+    "@id":"https://deskchaingeradordelink.netlify.app/#organizacao"
+    },
+    "offers":{
+    "@type":"Offer",
+    "price":"0",
+    "priceCurrency":"BRL"
+    }
+    },
+
+    {
+    "@type":"SoftwareApplication",
+    "@id":"https://deskchaingeradordelink.netlify.app/#software",
+    "name":"Deskchain WhatsApp Link Generator",
+    "operatingSystem":"All",
+    "applicationCategory":"BusinessApplication",
+    "url":"https://deskchaingeradordelink.netlify.app/",
+    "description":"Gerador de link WhatsApp gratuito que permite criar links clicáveis e QR Codes personalizados para atendimento e marketing.",
+    "inLanguage":"pt-BR",
+    "author":{
+    "@id":"https://deskchaingeradordelink.netlify.app/#organizacao"
+    },
+    "offers":{
+    "@type":"Offer",
+    "price":"0",
+    "priceCurrency":"BRL"
+    }
+    }
+
+    ]
     }
     </script>
 
