@@ -138,6 +138,71 @@
         /* Suavização de scroll para melhor UX */
         html { scroll-behavior: smooth; }
     </style>
+
+    <!-- ========================================== -->
+    <!-- PROTEÇÃO ANTI-CÓPIA E ANTI-INSPEÇÃO        -->
+    <!-- ========================================== -->
+    <style>
+        /* Desativa a seleção de texto e o toque longo nos telemóveis */
+        body {
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* EXCEÇÃO IMPORTANTE: Permite que o utilizador consiga escrever nos formulários */
+        input,
+        textarea,
+        select {
+            -webkit-user-select: auto;
+            -moz-user-select: auto;
+            -ms-user-select: auto;
+            user-select: auto;
+        }
+    </style>
+
+    <script>
+        // 1. Bloqueia o clique direito do rato
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // 2. Bloqueia o arrastar de imagens e elementos
+        document.addEventListener('dragstart', function (e) {
+            if (e.target.nodeName.toUpperCase() !== "INPUT" && e.target.nodeName.toUpperCase() !== "TEXTAREA") {
+                e.preventDefault();
+            }
+        });
+
+        // 3. Bloqueia atalhos de teclado de inspeção e cópia
+        document.addEventListener('keydown', function (e) {
+            // Bloqueia F12
+            if (e.key === 'F12' || e.keyCode === 123) {
+                e.preventDefault();
+            }
+
+            // Bloqueia Ctrl + Shift + I / J / C (Ferramentas de Programador)
+            if (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key)) {
+                e.preventDefault();
+            }
+
+            // Bloqueia Ctrl + U (Ver código-fonte) e Ctrl + S (Guardar página)
+            if (e.ctrlKey && ['U', 'u', 'S', 's'].includes(e.key)) {
+                e.preventDefault();
+            }
+
+            // Bloqueia Ctrl + C (Copiar) e Ctrl + P (Imprimir), exceto se estiver a digitar num formulário
+            if (e.ctrlKey && ['C', 'c', 'P', 'p'].includes(e.key)) {
+                // Se estiver num input ou textarea, permite copiar (útil para o Painel)
+                const activeElement = document.activeElement.tagName.toUpperCase();
+                if (activeElement !== "INPUT" && activeElement !== "TEXTAREA") {
+                    e.preventDefault();
+                }
+            }
+        });
+    </script>
 </head>
 <body class="bg-gray-50 font-sans text-gray-800 min-h-screen py-6 sm:py-12 px-4 sm:px-6 lg:px-8">
 
